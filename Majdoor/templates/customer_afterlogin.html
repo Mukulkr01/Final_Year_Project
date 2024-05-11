@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block title %} HOME - Majdoor {% endblock %}
+
+
+    {% block content %}
+    <header>
+        <div class="header">
+            <img src="https://i.pinimg.com/originals/37/42/bc/3742bcd3b4b5d471dae27a60bd4b5f07.png" alt="Logo 1"
+                class="logo">
+            <div class="header-text">SMART MAJDOOR<br>
+                <span><u>श्रम विभाग योजना, रोजगार समाधान विभाग</u></span></div>
+            <img src="https://www.pngitem.com/pimgs/m/107-1078734_narendra-modi-png-transparent-image-narendra-modi-photos.png"
+                alt="Logo 2" class="logo">
+        </div>
+
+        <nav class="navbar">
+            <a href="#" class="nav-link">Home</a>
+            <a href="{% url 'guide' %}" class="nav-link">Guidelines</a>
+            <a href="#" class="nav-link">FAQ</a>
+            <a href="{% url 'feedback' %}" class="nav-link">Feedback</a>
+            <a href="{% url 'about' %}" class="nav-link">About</a>
+            <a href="#" class="nav-link">Services</a>
+            <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="linked-texts">
+            <a href="#" class="linked-text">click here to download Smart Card</a>
+            <a href="#" class="linked-text">Click here to new notification</a>
+            <a href="#" class="linked-text">List of the city </a>
+            <a href="{% url 'forget' %}" class="linked-text">forget Password</a>
+        </div>
+    </header>
+    <style>
+        .button-container {
+            display: flex;
+          }
+          .button call-btn{
+            padding: 2px 20px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          
+          .button {
+            padding: 2px 20px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          .button:hover{
+            background-color: #45a049;
+          }
+          .button call-btn:hover{
+            background-color: #45a049;
+          }
+          
+          
+          .button:last-child {
+            margin-right: 0;
+          }
+          .card-columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Adjust as needed */
+          }
+          
+          .card {
+            width: calc(33.33% - 20px); /* Adjust the width of each card */
+            margin-bottom: 20px; /* Adjust spacing between cards */
+            
+          }
+          
+          .card img {
+            width: 100%;
+            height: auto;
+          }
+          
+          .card-body {
+            text-align: center; /* Optional: Center align text */
+           background-color:color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
+            
+            
+            
+          }
+          .card-title{
+            color:green;
+          }
+          
+            
+    </style>
+    <bode>
+       
+        <div class="container ">
+            <h2>SMART MAJDOOR</h2>
+            <div class="card-columns" style="padding: 10px; margin: 20px;">
+            {% for p  in products%}
+                <div class="card" style="width: 18rem; border:5px black solid">
+                    
+                    <div class="card-body">
+                    <h5 class="card-title">{{p.m_id}}</h5>
+                    <h5 class="card-title">{{ p.first_name }} {{ p.last_name }}</h5>
+
+
+                    <p class="card-text">{{p.type_of_works}}</p>
+                    <div class="button-container">
+                        <button class="button">Contact:></button>
+                        <button class="button call-btn" >{{ p.mobile_number}}</button>
+                      </div>
+                    </div>
+                </div>
+             {% endfor %}
+             
+            </div>
+        </div>
+      
+        {% endblock  %}
+    

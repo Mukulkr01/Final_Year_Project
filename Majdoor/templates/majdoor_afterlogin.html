@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reg:</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Add this style to your existing CSS */
+        .row-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+           
+            background-image: url('smg3.jpg');
+            
+}
+
+        .body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+        
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgb(240, 248, 255);
+            height: 150px;
+        }
+
+        .logo {
+            height: 120px;
+            width: 100px;
+            max-width: 100%;
+        }
+
+        .header-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .navbar {
+            background-color: Blue;
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-align: center;
+            color: white;
+            font-family: ui-monospace;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+       
+        .linked-texts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .linked-text {
+            margin: 0 10px;
+            padding: 5px;
+            text-decoration: none;
+            color: rgb(0, 0, 128);
+            background-color:white;
+            
+        }
+
+        .linked-text:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .nav-link {
+                margin-bottom: 10px;
+            }
+
+            .linked-texts {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+		/* .login-container{
+		width: 400px;
+    	height: 350px;
+    	background-color: #aacece;
+    	box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    	border-radius: 8px;
+    	position: absolute;
+    	top: 80%; 
+    	left: 12%;
+		bottom: 60%; 
+    	transform: translate(-40%, -50%);
+		}
+		 */
+		 .login-container {
+  background-image: url('Majdoor\templates\card.jpg'); 
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-top: 50px; 
+  width: 400px; 
+  height: 500px; 
+  background-color: #aacece; 
+  padding: 20px; 
+  border-radius: 5px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 400px; /* Change width as desired */
+  height: 200px; /* Change height as desired */
+  background-color: lightblue; /* Example background color */
+  border: 2px solid blue; /* Example border */
+  border-radius: 10px; /* Example border radius */
+  padding: 20px; /* Example padding */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Example box shadow */
+  transition: background-color 0.3s; 
+
+  ..login-container:hover {
+    background-color: rgba(173, 216, 230, 1); /* Solid lightblue on hover */
+  }
+  
+}
+.login-container .h2{
+  color: rgb(218,165,32);
+  font-size: 5px; 
+  
+
+}
+
+  .login-container form {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .login-container label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    width: 250px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .login-container button {
+    padding: 8px 16px;
+    margin: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .login-container .link-button {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    cursor: pointer;
+  }
+
+  .login-container button:hover,
+  .login-container .link-button:hover {
+    background-color: #555;
+  }
+  #gfg {
+    color: blue;
+    font-size: large;
+    
+  font-weight: bold;
+}
+    </style>
+</head>
+
+<body style="background-color:white;">
+    <header>
+        <div class="header">
+            <img src="https://i.pinimg.com/originals/37/42/bc/3742bcd3b4b5d471dae27a60bd4b5f07.png" alt="Logo 1"
+                class="logo">
+            <div class="header-text">SMART MAJDOOR<br>
+                <span><u>श्रम विभाग योजना, रोजगार समाधान विभाग</u></span></div>
+            <img src="https://www.pngitem.com/pimgs/m/107-1078734_narendra-modi-png-transparent-image-narendra-modi-photos.png"
+                alt="Logo 2" class="logo">
+        </div>
+
+        <nav class="navbar">
+            <a href="#" class="nav-link">EDIT</a>
+            <a href="{% url 'index' %}" class="nav-link">LOG_OUT</a>
+            
+        </nav>
+
+        <marquee width="100%"
+        id="gfg">
+   SMART Majdoor :श्रम विभाग योजना, रोजगार समाधान विभाग
+</marquee>
+    </header>
+    <div class="row-container">
+    
+      <div class="login-container" style="background-image: url('card.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <div class="h2">
+          <h2><u>{{m_id}}</u></h2>
+      </div>
+      </div>
+    </div>
+    
+
+
+   
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    </body>
+
+
+</html>

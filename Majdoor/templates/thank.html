@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Hacker Login Form</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+body 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+section 
+{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+section::before 
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#000,#0f0,#000);
+  animation: animate 5s linear infinite;
+}
+@keyframes animate 
+{
+  0%
+  {
+    transform: translateY(-100%);
+  }
+  100%
+  {
+    transform: translateY(100%);
+  }
+}
+section span 
+{
+  position: relative;
+  display: block;
+  width: calc(6.25vw - 2px);
+  height: calc(6.25vw - 2px);
+  background: white;
+  z-index: 2;
+  transition: 1.5s;
+}
+section span:hover 
+{
+  background: #0f0;
+  transition: 0s;
+}
+
+section .signin
+{
+  position: absolute;
+  width: 400px;
+  background: #222;  
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(0,0,0,9);
+}
+section .signin .content 
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+section .signin .content h2 
+{
+  font-size: 2em;
+  color: #0f0;
+  text-transform: uppercase;
+}
+section .signin .content .form 
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+section .signin .content .form .inputBox
+{
+  position: relative;
+  width: 100%;
+}
+section .signin .content .form .inputBox input 
+{
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+section .signin .content .form .inputBox i 
+{
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.signin .content .form .inputBox input:focus ~ i,
+.signin .content .form .inputBox input:valid ~ i
+{
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #fff;
+}
+.signin .content .form .links 
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.signin .content .form .links a 
+{
+  color: #fff;
+  text-decoration: none;
+}
+.signin .content .form .links a:nth-child(2)
+{
+  color: #0f0;
+  font-weight: 600;
+}
+.signin .content .form .inputBox input[type="submit"]
+{
+  padding: 10px;
+  background: #0f0;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+input[type="submit"]:active
+{
+  opacity: 0.6;
+}
+@media (max-width: 900px)
+{
+  section span 
+  {
+    width: calc(10vw - 2px);
+    height: calc(10vw - 2px);
+  }
+}
+@media (max-width: 600px)
+{
+  section span 
+  {
+    width: calc(20vw - 2px);
+    height: calc(20vw - 2px);
+  }
+}
+}
+      
+.wrapper-1{
+  width:150%;
+  height:100vh;
+  display: flex;
+flex-direction: row;
+}
+.wrapper-2{
+  padding :30px;
+  text-align:center;
+}
+h1{
+    font-family: 'Kaushan Script', cursive;
+  font-size:4em;
+  letter-spacing:3px;
+  color:#5892FF ;
+  margin:0;
+  margin-bottom:20px;
+}
+.wrapper-2 p{
+  margin:0;
+  font-size:1rem;
+  color:#aaa;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing:1px;
+}
+.go-home{
+  color:#fff;
+  background:#5892FF;
+  border:none;
+  padding:10px 50px;
+  margin:30px 0;
+  border-radius:30px;
+  text-transform:capitalize;
+  box-shadow: 0 10px 16px 1px rgba(174, 199, 251, 1);
+}
+.footer-like{
+  margin-top: auto; 
+  background:rgba(174, 199, 251, 1);
+  padding:0px;
+  text-align:center;
+}
+.footer-like p{
+  margin:0;
+  padding:4px;
+  color:black;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing:1px;
+}
+.footer-like p a{
+  font-weight: bold;
+  text-decoration:none;
+  color:black;
+  font-weight:600;
+}
+
+@media (min-width:360px){
+  h2{
+    font-size:5rem;
+  }
+  .go-home{
+    margin-bottom:20px;
+  }
+}
+
+@media (min-width:800px){
+  .content{
+  max-width:1000px;
+  margin:0 auto;
+}
+  .wrapper-1{
+  height: initial;
+  max-width:620px;
+  margin:0 auto;
+  margin-top:50px;
+  box-shadow: 4px 8px 40px 8px rgba(88, 146, 255, 0.2);
+}
+  
+}
+</style>
+<body>
+<!-- partial:index.partial.html -->
+
+
+ <body> <!-- partial:index.partial.html --> 
+
+  <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+
+   <div class="signin"> 
+
+    <div class="content">
+     <div class="wrapper-1">
+      <div class="wrapper-2">
+        <h2>Thank you !</h2>
+        <p>Thanks for subscribing to our news letter.  </p>
+        <p>you should receive a confirmation email soon  </p>
+        <div>
+            <p>Your registration was successful.</p>
+            <p>{{ m_id }}</p>
+        </div>
+        <button class="go-home">
+        download
+        </button>
+      </div>
+      <div class="footer-like">
+        
+         <a href="{% url 'majdoor_login'%}">Click here to login</a>
+        </p>
+      </div>
+  </div>
+
+    </div> 
+
+   </div> 
+
+  </section> <!-- partial --> 
+
+ </body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>

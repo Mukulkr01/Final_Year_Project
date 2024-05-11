@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Majdoor_Reg</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(240, 248, 255);
+    height: 150px;
+}
+
+.logo {
+    height: 120px;
+    width: 100px;
+    max-width: 100%;
+}
+
+.header-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar {
+    background-color: Blue;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-link {
+    text-align: center;
+    color: white;
+    font-family: ui-monospace;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+  form {
+    display: inline-block;
+    background-color:white;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: 5px;
+   
+  }
+
+  input[type="first_name"],
+  input[type="last_name"],
+  input[type="gender"] {
+    display: inline-block;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 14px;
+}
+  
+
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .heading h2{
+    text-align:center;
+    text-shadow: 1px 1px 2px #555;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
+  .raj {
+  position: absolute;
+  font-weight: bold;
+  top: 0.3rem; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the right position as needed */
+  
+ 
+}
+ .raj2 {	
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  position: absolute;
+  top: 0.3rem; /* Adjust the top position as needed */
+  right: -6rem; /* Adjust the right position as needed */
+ }
+ /* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4070f4;
+}
+.container{
+    position: relative;
+    width: 100%;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 0 15px;
+    background-color: color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
+    box-shadow: 3 5px 10px rgba(0,0,0,0.1);
+}
+.container header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.container header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: #4070f4;
+}
+.container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color:color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
+    overflow: hidden;
+}
+.container form .form{
+    position: absolute;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+.container form .form.second{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+form.secActive .form{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+form.secActive .form{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+.container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields .input{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input input :focus,
+.input-field select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input select,
+.input-field input[type="date"]{
+    color: #707070;
+}
+.container form button, .backBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: #4070f4;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.container form .button{
+    font-size: 14px;
+    font-weight: 400;
+}
+form button:hover{
+    background-color: #265df2;
+}
+form button i,
+form .backBtn i{
+    margin: 0 6px;
+}
+form .backBtn i{
+    transform: rotate(180deg);
+}
+form .buttons{
+    display: flex;
+    align-items: center;
+}
+form .buttons button , .backBtn{
+    margin-right: 14px;
+}
+
+@media (max-width: 750px) {
+    .container form{
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+       display: none;
+    }
+    form .fields .input-field{
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field{
+        width: 100%;
+    }
+}
+</style>
+
+<body style="background-color:white;">
+  <header>
+    <div class="header">
+        <img src="https://i.pinimg.com/originals/37/42/bc/3742bcd3b4b5d471dae27a60bd4b5f07.png" alt="Logo 1"
+            class="logo">
+        <div class="header-text">SMART MAJDOOR<br>
+            <span><u>श्रम विभाग योजना, रोजगार समाधान विभाग</u></span></div>
+        <img src="https://www.pngitem.com/pimgs/m/107-1078734_narendra-modi-png-transparent-image-narendra-modi-photos.png"
+            alt="Logo 2" class="logo">
+    </div>
+
+    <nav class="navbar">
+        <a href="{% url 'index' %}" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Guidelines</a>
+        <a href="#" class="nav-link">FAQ</a>
+        <a href="#" class="nav-link">Feedback</a>
+        <a href="{% url 'about' %}" class="nav-link">About</a>
+        <a href="#" class="nav-link">Services</a>
+        <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+    </nav>
+    <header>
+
+    <!-- users/templates/create_user.html -->
+    <div class="heading">
+  <h2><u>New Majdoor Registration</u></h2>
+    </div>
+
+
+  <div class="container">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="raj">
+        <label for="m_id">Smart_Majdoor ID:</label>
+    </div>
+    <div class="raj2">
+        <input type="text" id="m_id" name="m_id" class="form-control" readonly>
+    </div><br>
+    {{ form.as_p }}
+    <button type="submit">Register</button>
+     <div class="popup-container" id="successPopup">
+        <p id="successMessage"></p>
+    </div>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function() {
+          // Function to generate automatic ID
+          function generateAutoId() {
+            var prefix = 'SMj';
+            var suffix = Math.floor(Math.random() * 90000) + 10000; // Random 5-digit number
+            return prefix + suffix;
+          }
+    
+          // Update the ID field when the page loads
+          $('#m_id').val(generateAutoId());
+    
+          // Update the ID field when the form is reset
+          $('#createUserForm').on('reset', function() {
+            $('#m_id').val(generateAutoId());
+          });
+        });
+        $(function() {
+            $("#id_date_of_birth").datepicker({
+                dateFormat: 'yy-mm-dd',
+                changeMonth: true,
+                changeYear: true,
+                yearRange: '1970:2006',
+            });
+        });
+
+        $(document).ready(function() {
+            // Attach a keydown event handler to all text input fields
+            $('input[type="text"]').keydown(function(e) {
+              // Check if the pressed key is Enter (key code 13)
+              if (e.which === 13) {
+                // Prevent the default form submission
+                e.preventDefault();
+        
+                // Find the next input field and focus on it
+                var nextInput = $('input[type="text"]').get($('input[type="text"]').index(this) + 1);
+                if (nextInput) {
+                  $(nextInput).focus();
+                }
+              }
+            });
+          });
+        
+        
+    
+        
+    </script>
+  
+</body>
+</html>

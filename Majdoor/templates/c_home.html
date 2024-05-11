@@ -1,0 +1,284 @@
+<style>
+    *{
+        margin: 0;
+        padding: 0%;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    body{
+        background: #080808;
+        color: #fff
+    }
+    #header{
+        width: 100%;
+        height: 100vh;
+        background-image: url(picture/background\ black\ \(1\).jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .container{
+        padding: 10px 10%; 
+    }
+    
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;  
+    }
+    .logo{
+        width: 140px;
+    }
+    
+    nav ul li{
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+    }
+    
+    nav ul li a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        position: relative;
+    
+    }
+    nav ul li a::after{
+        content: '';
+        width: 0%;
+        height: 3px;
+        background: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s;
+    }
+    nav ul li a:hover::after{
+        width: 100%;
+    }
+    .header-text{
+        margin-top: 20%;
+        font-size: 30px;
+    }
+    .header-text h1{
+        font-size: 60px;
+        margin-top: 20px;
+    }
+    .header-text h1 span{
+        color: #ff004f;
+    }
+   */-------------------services----------------------*/
+    .services{
+        padding: 30px 0;
+    }
+    .services-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        margin-top: 10px;
+    }
+    .services-list div{
+        background: #262626;
+        padding: 20px;
+        font-size: 13px;
+        font-weight: 300;
+        border-radius: 10px;
+        transition: background 0.5s, transform 0.5s;
+    }
+    .services-list div i{
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+    .services-list div h2{
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    .services-list div a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 12px;
+        margin-top: 15px;
+        display: inline-block;
+    }
+    .services-list div:hover{
+        background: red;
+        transform: translateY(-10px);
+    }
+   
+    .services-list h2{
+        color: Blue;
+    }
+    .services-list #{
+        color:Blue;
+    }
+  
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: rgb(240, 248, 255);
+        height: 200px;
+    }
+    
+    .logo {
+        height: 120px;
+        width: 100px;
+        max-width: 100%;
+    }
+    
+    .header-text {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+    
+    .navbar {
+        background-color: Blue;
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .nav-link {
+        text-align: center;
+        color: white;
+        font-family: ui-monospace;
+        text-decoration: none;
+    }
+    
+    .nav-link:hover {
+        text-decoration: underline;
+    }
+</style>
+<bode>
+    <body style="background-color:white;">
+        <header>
+          <div class="header">
+              <img src="https://i.pinimg.com/originals/37/42/bc/3742bcd3b4b5d471dae27a60bd4b5f07.png" alt="Logo 1"
+                  class="logo">
+              <div class="header-text">SMART MAJDOOR<br>
+                  <span><u>श्रम विभाग योजना, रोजगार समाधान विभाग</u></span></div>
+              <img src="https://www.pngitem.com/pimgs/m/107-1078734_narendra-modi-png-transparent-image-narendra-modi-photos.png"
+                  alt="Logo 2" class="logo">
+          </div>
+      
+          <nav class="navbar">
+              <a href="{% url 'index' %}" class="nav-link">Home</a>
+              <a href="#" class="nav-link">Guidelines</a>
+              <a href="#" class="nav-link">FAQ</a>
+              <a href="#" class="nav-link">Feedback</a>
+              <a href="{% url 'about' %}" class="nav-link">About</a>
+              <a href="#" class="nav-link">Services</a>
+              <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+          </nav>
+          <header>
+            <div = id="services">
+                <div class="container">
+                    <h1 class="sub-title"> Services</h1>
+                    <div class="services-list">
+                        <div>
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Workers...</h2>
+                            <p>This option is use to Contact skilled workers for professional building/construction services, connecting users with experienced professionals efficiently and effectively.</p>
+                            <a href="#">Connect..</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-crop-simple"></i>
+                            <h2>Plumber.....</h2>
+                            <p>Connect with professional plumbers for expert plumbing services, ensuring efficient and reliable solutions for your plumbing needs.</p>
+                            <a href="#">Connect..</a>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-app-store-ios"></i>
+                            <h2>Electrican....</h2>
+                            <p>"Reach out to skilled electricians for professional electrical services, ensuring safety, reliability, and efficiency in all electrical work."</p>
+                            <a href="#">Connect..</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-code"></i>
+                            <h2>car mechanic</h2>
+                            <p>"Contact experienced automotive technicians for professional car repair services, ensuring quality workmanship and reliable solutions for your vehicle needs."</p>
+                            <a href="#">Connect..</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Bike Machanic</h2>
+                            <p>"Connect with skilled bicycle mechanics for professional bike repair services, ensuring expertise, reliability, and efficient solutions for your cycling needs."</p>
+                            <a href="#">Connect..</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Carpenters:</h2>
+                            <p>
+                                "Utilize this option to connect with skilled carpenters for professional woodworking and construction services, ensuring high-quality craftsmanship and reliability."</p>
+                            <a href="#">Connect..</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Teachers</h2>
+                            <p>W
+                                "Use this option to engage with qualified educators for professional teaching and academic support, ensuring effective learning experiences."</p>
+                            <a href="#">Connect..</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-code"></i>
+                            <h2>IT Professionals</h2>
+                            <p>
+                                "Utilize this option to connect with experienced IT professionals for efficient and effective information technology services and solutions."</p>
+                            <a href="#">Connect..</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+                function opentab(tabname){
+                    for(tablink of tablinks){
+                        tablink.classList.remove("active-link");
+                    }
+                    for(tabcontent of tabcontents){
+                        tabcontent.classList.remove("active-tab");
+                    }
+                    event.currentTarget.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
+            </script>
+            <script>
+                var sidemenu = document.getElementById("sidemenu");
+                function openmenu(){
+                    sidemenu.style.right = "0";
+                }
+                function closemenu(){
+                    sidemenu.style.right = "-200px";
+                }
+            </script>
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbww7qcAhehbXiPW6r2GDhYLWBJ-iRBMND7EbN62fE1vjjMK1pYPOrBT_2Qoof3vt0f_hA/exec'
+                const form = document.forms['submit-to-google-sheet']
+                const msg = document.getElementById("msg")
+              
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        msg.innerHTML = "Message sent successfully"
+                        setTimeout(function(){
+                            msg.innerHTML = ""
+                        },5000)
+                        form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+                })
+              </script>

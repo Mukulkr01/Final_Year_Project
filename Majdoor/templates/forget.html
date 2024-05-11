@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %} HOME - Majdoor {% endblock %}
+
+
+    {% block content %}
+    <header>
+        <div class="header">
+            <img src="https://i.pinimg.com/originals/37/42/bc/3742bcd3b4b5d471dae27a60bd4b5f07.png" alt="Logo 1"
+                class="logo">
+            <div class="header-text">SMART MAJDOOR<br>
+                <span><u>श्रम विभाग योजना, रोजगार समाधान विभाग</u></span></div>
+            <img src="https://www.pngitem.com/pimgs/m/107-1078734_narendra-modi-png-transparent-image-narendra-modi-photos.png"
+                alt="Logo 2" class="logo">
+        </div>
+
+        <nav class="navbar">
+            <a href="#" class="nav-link">Home</a>
+            <a href="{% url 'guide' %}" class="nav-link">Guidelines</a>
+            <a href="#" class="nav-link">FAQ</a>
+            <a href="{% url 'feedback' %}" class="nav-link">Feedback</a>
+            <a href="{% url 'about' %}" class="nav-link">About</a>
+            <a href="#" class="nav-link">Services</a>
+            <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="linked-texts">
+            <a href="#" class="linked-text">click here to download Smart Card</a>
+            <a href="#" class="linked-text">Click here to new notification</a>
+            <a href="#" class="linked-text">List of the city </a>
+            <a href="{% url 'forget' %}" class="linked-text">forget Password</a>
+        </div>
+    </header>
+<div class="row-container">
+    
+
+    <div class="login-container">
+        <form>
+            <div align:center>
+            <h4><b>Customer<b></h4>
+            </div>
+            <div class="form-group">
+                <label for="customerId">Customer ID:</label>
+                <input type="text" id="customerId" name="customerId" required placeholder="customer_id">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="password">
+                <label for="password">Re-Password:</label>
+                <input type="re-password" id="re-password" name="re-password" required placeholder="re-password"><br>
+                <button type="submit">Forget C_Id Password</button>
+            </div>
+          
+        </form>
+    </div>
+    <div class="login-container2">
+        <form>
+            <div align:center>
+            <h4><b>Majdoor<b></h4>
+            </div>
+            <div class="form-group">
+                <label for="Majdoor_Id">Majdoor ID:</label>
+                <input type="text" id="majdoorId" name="majdoorId" required placeholder="majdoor_Id">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="password">
+                <label for="password">Re-Password:</label>
+                <input type="re-password" id="re-password" name="re-password" required placeholder="re-password">
+            </div>
+            <div class="form-group">
+                <button type="submit">Forget M_Id Password</button>
+               
+            </div>
+        </form>
+    </div>
+</div>
+<div class="linked-texts" align:center>
+    
+</div>
+	  
+{% endblock  %}
